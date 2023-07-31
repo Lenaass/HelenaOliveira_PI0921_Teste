@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banco</title>
+</head>
+<body>
+<h1>banco</h1>
+
+<form action="/criar_conta/" method="post">
+<h2>Criar Conta</h2>
+<label for="numero">Número da Conta:</label>
+<input type="number" name="numero" required><br>
+<label for="saldo">Saldo Inicial (opcional):</label>
+<input type="number" name="saldo"><br>
+<button type="submit">Criar Conta</button>
+</form>
+
+
+<form action="/depositar/" method="post">
+<h2>Depositar</h2>
+<label for="numero">Número da Conta:</label>
+<input type="number" name="numero" required><br>
+<label for="valor">Valor a Depositar:</label>
+<input type="number" name="valor" required><br>
+<button type="submit">Depositar</button>
+</form>
+
+
+<form action="/levantar/" method="post">
+<h2>Levantar</h2>
+<label for="numero">Número da Conta:</label>
+<input type="number" name="numero" required><br>
+<label for="valor">Valor a Levantar:</label>
+<input type="number" name="valor" required><br>
+<button type="submit">Levantar</button>
+</form>
+
+
+<form action="/transferir/" method="post">
+<h2>Transferir</h2>
+<label for="numero_origem">Conta de Origem:</label>
+<input type="number" name="numero_origem" required><br>
+<label for="numero_destino">Conta de Destino:</label>
+<input type="number" name="numero_destino" required><br>
+<label for="valor">Valor a Transferir:</label>
+<input type="number" name="valor" required><br>
+<button type="submit">Transferir</button>
+</form>
+
+
+<div class="account-info">
+<h3>Consultar Saldo e Extrato</h3>
+<form action="/acessar_conta/" method="get">
+<label for="numero">Número da Conta:</label>
+<input type="number" name="numero" required><br>
+<button type="submit">Consultar Saldo</button>
+<button formaction="/extrato/" type="submit">Ver Extrato</button>
+</form>
+</div>
+
+
+
+<div class="success-msg" id="success-msg"></div>
+<div class="error-msg" id="error-msg"></div>
+</body>
+</html>
