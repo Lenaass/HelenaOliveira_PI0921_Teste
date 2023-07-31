@@ -89,7 +89,6 @@ def menu():
     opcao = int(input("Escolha: "))
     return opcao
 
-# Create the table if it doesn't exist
 create_table()
 
 while True:
